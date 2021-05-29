@@ -1,5 +1,11 @@
 # TruckX Dashcam
 
+```
+$ git clone https://github.com/nisheejaiswal/TruckX.git
+$ cd TruckX
+$ go run main.go
+```
+On the terminal the Login Message and Location Message will be displayed after every 1 minute.
 ## Dashcam APIs
 
 The Login Message of vehicle's whose power_on is true. And Location Message gets displayed for all the vehicle registered on the dashcam on the terminal after every 1 minute.
