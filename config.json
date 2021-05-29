@@ -3,6 +3,5 @@
     "database_server": "localhost",
     "database_port": "27017",
     "database_name": "truckX",
-    "proto": "http://",
-    "server_port": ":8082"
+    "proto": "http://"
 }

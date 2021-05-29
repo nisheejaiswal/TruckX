@@ -23,6 +23,8 @@ Example :
 }
 ```
 
+The configuration is mentioned in the config.json. The Postman API URL will be : http://localhost:8081 as the backend APIs are being served on the port 8081.
+
 There can be three microservice designed for the Dashcam Application.
 The three microservices will be as follows :
 1. Vehicle
