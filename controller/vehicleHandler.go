@@ -256,3 +256,28 @@ func vehicleEventHandler(w http.ResponseWriter, r *http.Request) {
 
 	responseWithStaus(w, http.StatusCreated, alarmMessage)
 }
+
+func dashcamPostHandler(w http.ResponseWriter, r *http.Request) {
+	ctx, cancel := context.WithTimeout(r.Context(), time.Second*2)
+	defer cancel()
+
+	dbClient := mongodb.ConnectDB()
+
+	imei := mux.Vars(r)["imei"]
+	command := mux.Vars(r)["command"]
+
+	_, err := services.VehicleMongoService(dbClient, utils.Config.DatabaseName).FindVehicle(ctx, imei)
+	if err != nil {
+		errorParser(w, err.Error())
+		return
+	}
+	var response models.DashcamMessage
+	if command == "reboot" || command == "configure ip:port" {
+		response = models.DashcamMessage{
+			Type:     "COMMAND_RESPONSE",
+			Response: "OK/Failure",
+		}
+	}
+
+	responseWithStaus(w, http.StatusOK, response)
+}

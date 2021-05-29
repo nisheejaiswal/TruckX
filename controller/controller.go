@@ -28,6 +28,8 @@ func RunController() {
 	r.HandleFunc("/api/v1/location/{name}", locationHandler).Methods(http.MethodPost)
 	r.HandleFunc("/api/v1/location/{name}", locationGetHandler).Methods(http.MethodGet)
 
+	r.HandleFunc("/api/v1/dashcam/{imei}/{command}", dashcamPostHandler).Methods(http.MethodPost)
+
 	corsObj := handlers.AllowedOrigins([]string{"*"})
 	corsHandler := handlers.CORS(
 		handlers.AllowedHeaders([]string{"Content-Type", "Content-Length", "Accept-Encoding", "X-CSRF-Token", "Authorization", "accept", "origin", "Cache-Control", "X-Requested-With"}),
