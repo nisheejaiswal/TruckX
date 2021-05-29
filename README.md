@@ -3,7 +3,8 @@
 ## Dashcam APIs
 
 The Login Message of vehicle's whose power_on is true.And Location Message gets displayed for all the vehicle registered on the dashcam on the terminal after every 1 minute.
-Example :- 
+Example :
+<br>
 **Login Message**
 ```
 {
