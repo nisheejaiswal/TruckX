@@ -23,6 +23,14 @@ Example :
 }
 ```
 
+There can be three microservice designed for the Dashcam Application.
+The three microservices will be as follows :
+1. Vehicle
+2. Location
+3. Video
+
+![](images/0001.png)
+
 #### **Vehicle Registration**
 
 Registers a vehicle to the dashcam. 

@@ -24,12 +24,15 @@ func vehicleHandler(w http.ResponseWriter, r *http.Request) {
 	dbClient := mongodb.ConnectDB()
 
 	var vehicle models.Vehicle
+
+	// POST Request JSON Body
 	err := json.NewDecoder(r.Body).Decode(&vehicle)
 	if err != nil {
 		errorParser(w, "badreq: Invalid Request Body!")
 		return
 	}
 
+	// Insert a vehicle into the Database
 	err = services.VehicleMongoService(dbClient, utils.Config.DatabaseName).CreateVehicle(ctx, vehicle)
 	if err != nil {
 		errorParser(w, err.Error())
