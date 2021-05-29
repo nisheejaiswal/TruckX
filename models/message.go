@@ -24,8 +24,13 @@ type LocationMessage struct {
 }
 
 type DashcamMessage struct {
-	Type     string
-	IMEI     string
-	Command  string
-	Response string
+	Type     string `json:"type" bson:"type, omitempty"`
+	IMEI     string `json:"imei" bson:"imei, omitempty"`
+	Command  string `json:"command" bson:"command, omitempty"`
+	Response string `json:"response" bson:"response, omitempty"`
+}
+
+type DashcamCommand struct {
+	Type     string `json:"type" bson:"type, omitempty"`
+	Response string `json:"response" bson:"response, omitempty"`
 }

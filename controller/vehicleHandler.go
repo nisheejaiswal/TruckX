@@ -274,9 +274,9 @@ func dashcamPostHandler(w http.ResponseWriter, r *http.Request) {
 		errorParser(w, err.Error())
 		return
 	}
-	var response models.DashcamMessage
+	var response models.DashcamCommand
 	if command == "reboot" || command == "configure ip:port" {
-		response = models.DashcamMessage{
+		response = models.DashcamCommand{
 			Type:     "COMMAND_RESPONSE",
 			Response: "OK/Failure",
 		}
