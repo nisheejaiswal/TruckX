@@ -2,7 +2,6 @@
 
 ### Dashcam APIs
 
-<br>
 
 #### **Vehicle Registration**
 
@@ -33,8 +32,6 @@ Hit the API using postman to register a vehicle to the dashcam.
 }
 ```
 
-<br>
-
 #### **Vehicle Power ON and OFF**
 
 Power on and off a vehicle on the dashcam. 
@@ -61,8 +58,6 @@ Hit the API using postman after registering a vehicle and then updating the powe
 }
 ```
 
-<br>
-
 #### **Login Meassage**
 
 Power on and off a vehicle on the dashcam.
@@ -80,8 +75,6 @@ This API gets hitted to the terminal if any of the vehicle which is registered t
     "imei": "1234"
 }
 ```
-
-<br>
 
 #### **Vehicle List**
 
@@ -107,8 +100,6 @@ Get all the vehicles list registered on the dashcam.
 ]
 ```
 
-<br>
-
 #### **Vehicle Detail**
 
 Get a vehicle's details registered on the dashcam.
@@ -126,8 +117,6 @@ Get a vehicle's details registered on the dashcam.
     "region": "india"
 }
 ```
-
-<br>
 
 #### **Vehicle Event**
 
@@ -154,8 +143,6 @@ Hit the API using postman to generate an event of type "vibration", "overspeed",
 }
 ```
 
-<br>
-
 #### **Vehicle Video**
 
 Post a vehicle video.
@@ -174,8 +161,6 @@ This API gets hitted inside the Vehicle Event API.
     "data": "filename"
 }
 ```
-
-<br>
 
 #### **Dashcam Message**
 
@@ -197,8 +182,6 @@ Hit the API using postman. The command has to be either "reboot" or "configure i
 }
 ```
 
-<br>
-
 #### **Location**
 
 Post a location coordinates.
@@ -217,8 +200,6 @@ This API gets hitted inside the Vehicle Registration API.
     "longitude": -93.097702
 }
 ```
-
-<br>
 
 #### **Location Detail**
 
